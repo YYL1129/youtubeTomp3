@@ -1,45 +1,87 @@
 # 🧠 Git Commands Cheat Sheet
 
-## ✅ Save Current Progress
+A quick reference to help you manage Git in GitHub Codespaces.
+
+---
+
+## ✅ Save Your Work (Snapshot)
 
 ```bash
 git add .
 git commit -m "Your message"
+```
 
-## explanation 
-git add . — Add all files to staging
-git commit -m — Save a snapshot of your code
+- `git add .` — Stage all changed files  
+- `git commit -m` — Save a snapshot with a message
 
+---
 
-git checkout -b new-branch-name  
-# Create a New Branch (for testing), Safe to test changes without touching main branch
+## 🌿 Work on a Safe Copy (Branch)
 
-git checkout main 
-# Switch Between Branches
+```bash
+git checkout -b new-branch-name
+```
 
-git merge branch-name 
-# Merge Back Changes (if test works) 
+- Creates a new branch to test code changes safely
 
+---
+
+## 🔁 Switch Between Branches
+
+```bash
+git checkout main
+```
+
+- Go back to the main branch
+
+---
+
+## 🔀 Merge Branch Changes
+
+```bash
+git merge branch-name
+```
+
+- Merge your test branch into main (if successful)
+
+---
+
+## 🗑️ Delete Unused Branch
+
+```bash
 git branch -d branch-name
-# Delete a Branch (after merging or if not needed)
+```
 
+- Clean up branches you no longer need
+
+---
+
+## ♻️ Revert a File to Last Commit
+
+```bash
 git checkout HEAD -- filename.py
-# Restore a File to Last Commit
+```
 
+- Restore the file to its last committed state
+
+---
+
+## 🚀 Push Current Version to GitHub
+
+```bash
 git push origin main
-# Push to GitHub (optional)
+```
 
+- Upload your committed files to GitHub
 
-## Push Current Version to GitHub
-# In your Codespace terminal, run:
-git push origin main
-# This will:
-# Upload your committed .py files
-# Upload git-cheatsheet.md
-# Sync everything to your GitHub repo
+---
 
-# Step 1: Commit the missing file
+## 📥 Push a New File (e.g. cheat sheet)
+
+```bash
 git add git-cheatsheet.md
 git commit -m "Add git command cheat sheet"
-# Step 2: Push to GitHub
 git push origin main
+```
+
+- Adds your markdown file and uploads it to your GitHub repo
